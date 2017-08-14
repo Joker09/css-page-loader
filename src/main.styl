@@ -1,0 +1,182 @@
+html,
+body 
+  height 100%
+  width 100%
+  margin 0
+
+.loader
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  z-index 100
+  display flex
+  flex-flow column nowrap
+  justify-content center
+  align-items center
+  background-color #fff
+  .logo
+    position relative
+    width 100px
+    height 100px
+    z-index 100
+    box-sizing border-box
+    background-color white
+    &::before
+    &::after
+      content ""
+      position absolute
+      width 100%
+      height 100%
+      box-sizing border-box
+      border 4px solid transparent
+      animation-timing-function: linear
+      z-index 1
+    &::before
+      top 0
+      left 0
+      border-top-color black
+      border-right-color black
+      animation border-before 1.5s infinite
+      animation-direction alternate
+    &::after
+      bottom 0
+      right 0
+      border-bottom-color black
+      border-left-color black
+      animation-delay 1.5s
+      animation border-after 1.5s infinite
+      animation-direction alternate
+    div
+      position absolute
+    .red
+      top 0
+      bottom 0
+      left 0
+      width 27%
+      border-right 4px solid black
+      background-color #EA5664
+      animation red1 1.5s infinite
+      animation-direction alternate
+    .white
+      top 0
+      right 0
+      width 27%
+      height 50%
+      border-left 4px solid black
+      background-color white
+      animation white1 1.5s infinite
+      animation-direction alternate
+    .orange
+      right 0
+      bottom 0
+      width 73%
+      height 50%;
+      border-top 4px solid black
+      background-color orange
+      animation orange1 1.5s infinite
+      animation-direction alternate
+@keyframes border-before
+  0% {
+    width 0
+    height 0
+    border-right-color transparent
+  }
+  12.49% {
+    border-right-color transparent
+  }
+  12.5% {
+    height 0
+    width 100%
+    border-right-color black
+  }
+  25%,
+  100% {
+    width 100%
+    height 100%
+  }
+
+@keyframes border-after
+  0%,
+  24.49% {
+    width 0
+    height 0
+    border-left-color transparent
+    border-bottom-color transparent
+  }
+  25% {
+    width 0
+    height 0
+    border-left-color transparent
+    border-bottom-color black
+  }
+  37.5% {
+    height 0
+    width 100%
+    border-left-color black
+    border-bottom-color black
+  }
+  50%,
+  100% {
+    width 100%
+    height 100%
+    border-left-color black
+    border-bottom-color black
+  }
+
+@keyframes red1
+  0%,
+  50% {
+    width 0
+    opacity 0
+  }
+  50.01% {
+    opacity 1
+  }
+  65%,
+  100% {
+    width 27%
+    opacity 1
+  }
+
+@keyframes orange1 
+  0%,
+  65% {
+    height 0
+    opacity 0
+  }
+  65.01% {
+    opacity 1
+  }
+  80%,
+  100% {
+    opacity 1
+    height 50%
+  }
+
+@keyframes white1 
+  0%,
+  75% {
+    width 0
+    opacity 0
+  }
+  75.01% {
+    opacity 1
+  }
+  90%,
+  100% {
+    opacity 1
+    width 27%
+  }
+.container 
+  max-width 1100px
+  margin auto
+  .item
+    width 210px
+    margin-bottom 10px
+    border 4px solid black
+    box-sizing border-box
+    img
+      display block
+      max-width 100%

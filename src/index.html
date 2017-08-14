@@ -1,0 +1,72 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>page-loader</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="loader">
+    <div class="logo">
+        <div class="white"></div>
+        <div class="orange"></div>
+        <div class="red"></div>
+    </div>
+    <p>loading</p>
+  </div>
+  <header></header>  
+  <div class="container">
+    <div class="item">
+      <img src="http://oubmzdsl3.bkt.clouddn.com/17-8-14/40339345.jpg" alt="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis reiciendis quas aperiam quos dolorum veniam magni facilis illum. Repellendus earum porro ea mollitia maxime, vel placeat. Laboriosam nam temporibus cum.
+    </div>
+    <div class="item">
+        <img src="http://oubmzdsl3.bkt.clouddn.com/17-8-14/40339345.jpg" alt="">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit temporibus id error hic accusantium? Facere a ullam voluptatum libero omnis error incidunt, sequi veritatis quam voluptate, magnam ad officiis doloremque aut odit architecto. Nemo suscipit quibusdam repudiandae eum officia et voluptatibus? Voluptatum dignissimos eaque recusandae aut exercitationem repudiandae voluptatibus!
+    </div>
+    <div class="item">
+        <img src="http://oubmzdsl3.bkt.clouddn.com/17-8-14/40339345.jpg" alt="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vel corporis ex architecto ad totam! Suscipit deserunt quibusdam cum aut beatae dolor eligendi voluptas, voluptates similique ipsam maiores modi voluptatem.
+    </div>
+    <div class="item">
+      <img src="http://oubmzdsl3.bkt.clouddn.com/17-8-14/40339345.jpg" alt="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nisi laborum itaque eum, totam maiores iusto quas perspiciatis doloribus sed qui. Repellat facere excepturi ad officiis culpa, nulla porro quia quae esse repellendus tempora error illum ullam tenetur assumenda ut cum, qui quasi magnam voluptate a distinctio. Placeat rerum culpa, doloribus dolorem at numquam officia ut molestias. Velit, fuga laboriosam?
+    </div>
+    <div class="item">
+      <img src="http://oubmzdsl3.bkt.clouddn.com/17-8-14/40339345.jpg" alt="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste voluptatem veritatis dignissimos enim obcaecati iusto quibusdam sequi laboriosam odit!
+    </div>
+    <div class="item">
+      <img src="http://oubmzdsl3.bkt.clouddn.com/17-8-14/40339345.jpg" alt="">  
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laudantium maiores autem eaque assumenda corrupti hic blanditiis. Temporibus officia debitis voluptatum cum ut. Minus hic mollitia aliquid est possimus, itaque placeat expedita nisi. Minus eaque odit dolores, labore modi incidunt dignissimos repellendus. Inventore, animi labore.
+    </div>
+    <div class="item">
+      <img src="http://oubmzdsl3.bkt.clouddn.com/17-8-14/40339345.jpg" alt="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. At, enim sapiente! Vel, quisquam atque. Quas laudantium, sapiente laboriosam impedit ex sed quaerat autem laborum, provident qui velit officia illo nisi?
+    </div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo similique unde inventore mollitia! Vitae nisi repudiandae perspiciatis? Magnam obcaecati ab sapiente illo dignissimos doloremque!</div>
+    <div class="item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores atque totam vel nesciunt veniam nisi pariatur, ex eaque doloremque est voluptatibus animi soluta quo placeat adipisci. Dolore a magnam, voluptate sequi iusto perspiciatis commodi, voluptatum nobis accusamus rem, quasi ducimus?</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloremque earum pariatur saepe, deleniti libero error delectus beatae ratione, porro, vitae incidunt laboriosam natus nemo nostrum officia. Hic, natus, ducimus voluptate debitis inventore ab, nisi ipsam asperiores aliquid eveniet dolore sit laudantium quidem quaerat consectetur.</div>
+    <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto commodi quos corrupti quibusdam! Dolore accusantium esse rerum. Sunt nihil dignissimos architecto illo pariatur aliquam esse numquam eaque corporis, excepturi rerum consequuntur dolorem repellat, aliquid praesentium!</div>
+    <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam provident, aspernatur inventore voluptatum modi alias, maiores, pariatur odit consectetur ex asperiores! Quos quia quo a odio reprehenderit pariatur excepturi deserunt.</div>
+  </div>
+  <script src="./masonry.min.js"></script>
+  <script src="https://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
+  <script>
+    window.addEventListener('load',function(){
+      document.querySelector('.loader').style.display = 'none';
+    })
+
+    const container = document.querySelector('.container');
+    let msnry;
+
+    imagesLoaded(container, ()=>{
+      msnry = new Masonry(container, {
+        columnWidth: 220,
+        itemSelector: '.item'
+      })
+    })
+  </script>
+</body>
+</html>
